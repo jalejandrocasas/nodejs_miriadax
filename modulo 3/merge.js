@@ -16,7 +16,7 @@ for (argument in mArguments){
 	readStream = fs.createReadStream(mArguments[argument]);
 	//Si se produce un evento de error en el reader informamos
 	readStream.on('error', function(error) {
-			console.log('Se ha producido un error con el siguiente sigiente fichero: \n'+error.path+'\n'+error);
+			console.log('Se ha producido un error con el siguiente fichero: \n'+error.path+'\n'+error);
 	});
 	readStream.pipe(writeStream);
 }
